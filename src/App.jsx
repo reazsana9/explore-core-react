@@ -1,12 +1,15 @@
 
 import './App.css'
+import ToDo from './Todo';
 
 function App() {
 
   return (
     <>
       <h1>React Core concepts</h1>
-      <Student></Student>
+      <ToDo task="Learn React" isDone={true}></ToDo>
+
+      {/* <Student></Student>
       <Student></Student>
       <Person></Person>
       <Developer name="Mozumder" tech="js"></Developer>
@@ -15,12 +18,12 @@ function App() {
       <Player name="tamim" runs="5000"></Player>
       <Player name="mushi" runs="5000"></Player>
       <Salami event="Roja Eid" amount="20"></Salami>
-      <Salami event="Graduation"></Salami>
+      <Salami event="Graduation"></Salami> */}
     </>
   )
 }
 
-function Salami({ event, amount = 0}) {
+function Salami({ event, amount = 0 }) {
   return (
     <div className='student'>
       <p>Salami For: {event}</p>
