@@ -3,6 +3,7 @@ import './App.css'
 import ToDo from './Todo';
 import Actor from './Actor';
 import Singer from './Singer';
+import Library from './Library';
 
 function App() {
   const actors = ['Bappa Raj', 'Omar Sunny', 'Salman Shah', 'Jasim', 'Anwar', 'Rajjak'];
@@ -11,6 +12,13 @@ function App() {
     { id: 1, name: 'Dr. Mahfuz', age: 68, },
     { id: 2, name: 'Tahsan', age: 45, },
     { id: 3, name: 'Shuvro Deb', age: 57, }
+  ];
+
+  const books = [
+    {id: 1, name: 'Physics', price: 250},
+    {id: 2, name: 'Chemistry', price: 350},
+    {id: 3, name: 'Math', price: 255},
+    {id: 4, name: 'Biology', price: 290},
   ]
 
   // const time = 50;
@@ -18,6 +26,8 @@ function App() {
   return (
     <>
       <h1>React Core concepts</h1>
+
+      <Library books={books}></Library>
 
       {
         singers.map(singer => <Singer key={singer.id} singer={singer}></Singer>)
